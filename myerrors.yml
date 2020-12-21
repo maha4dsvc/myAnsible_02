@@ -11,6 +11,7 @@
     apt:
       namee: git
       state: present
+    ignore_errors: yes
 
   - name: task3 install git
     apt:
