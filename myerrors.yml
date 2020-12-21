@@ -1,0 +1,19 @@
+---
+- hosts: myubuntuserver
+  become: yes
+  tasks:
+  - name: task1 install git
+    apt:
+      name: git
+      state: present
+
+  - name: task2 install git
+    apt:
+      namee: git
+      state: present
+
+  - name: task3 install git
+    apt:
+      name: git
+      state: present
+
