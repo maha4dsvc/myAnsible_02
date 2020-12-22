@@ -6,6 +6,7 @@
     apt:
       name: git
       state: present
+    ignore_errors: yes
 
   - name: task2 install git
     apt:
@@ -17,4 +18,5 @@
     apt:
       name: git
       state: present
+    ignore_errors: yes
 

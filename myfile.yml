@@ -1,0 +1,9 @@
+---
+- hosts: myubuntuserver
+  become: yes
+  tasks:
+  - name: create a file
+    file:
+      path: /home/ubuntu/mytestfile.txt 
+      state: touch
+    
