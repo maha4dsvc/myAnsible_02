@@ -6,4 +6,14 @@
     file:
       path: /home/ubuntu/mytestfile.txt 
       state: touch
+  - name: i want install apache webserver on ubuntu
+    apt:
+      name: apache2
+      state: present
+
+  - name:  i want to copy file into ansible nodes side
+    template:
+      src: myindex.j2
+      dest: /var/www/html/index.html
+
     
