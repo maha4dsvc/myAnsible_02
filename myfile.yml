@@ -6,6 +6,7 @@
     file:
       path: /home/ubuntu/mytestfile.txt 
       state: touch
+  - include: file.yml
   - name: i want install apache webserver on ubuntu
     apt:
       name: apache2
@@ -16,6 +17,6 @@
       src: myindex.j2
       dest: /var/www/html/index.html
 
-      
+
 
     
