@@ -11,11 +11,25 @@
     apt:
       name: apache2
       state: present
+    notify: restartwebserver
 
   - name:  i want to copy file into ansible nodes side
     template:
       src: myindex.j2
       dest: /var/www/html/index.html
+    notify: restartwebserver
+
+
+  handlers:
+  - name: installgit
+    apt:
+      name: git
+      state: present
+  - name: restartwebserver
+    service:
+      name: apache2
+      state: restarted
+
 
 
 
