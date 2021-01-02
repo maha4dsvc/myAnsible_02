@@ -1,0 +1,21 @@
+---
+- name: change group
+  command: sudo chgrp -R tomcat /opt/tomcat
+     
+- name:  chmod g+r
+  command: sudo chmod -R g+r /opt/tomcat/conf
+
+- name: chmod g+x
+  command: sudo chmod g+x /opt/tomcat/conf
+  
+- name: chown on webapps
+  command: sudo chown -R tomcat /opt/tomcat/webapps/
+
+- name: chown on work
+  command: sudo chown -R tomcat /opt/tomcat/work/
+
+- name: chown on temp
+  command: sudo chown -R tomcat /opt/tomcat/temp/
+
+- name: chown on logs
+  command: sudo chown -R tomcat /opt/tomcat/logs/
