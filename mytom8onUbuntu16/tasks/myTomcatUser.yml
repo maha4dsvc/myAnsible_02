@@ -8,7 +8,7 @@
   user:
     name: tomcat
     group: tomcat
-    shell: bin/false
+    shell: /bin/false
     home: /opt/tomcat
 
   
