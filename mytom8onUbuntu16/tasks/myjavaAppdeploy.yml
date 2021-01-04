@@ -2,5 +2,5 @@
 - name: deploy
   get_url:
     url: https://mymaha6am.s3.us-east-2.amazonaws.com/mahaLogin.war
-    dest: /opt/tomcat/wepapps/mahaLogin.war
+    dest: /opt/tomcat/webapps/mahaLogin.war
     force_basic_auth: yes
