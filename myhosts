@@ -5,8 +5,7 @@
 172.31.3.117   
 
 [myappservers]
-172.31.3.118
-172.31.3.119
+172.31.45.90
 
 
 [myDBservers]
@@ -15,6 +14,7 @@
 
 [myubuntuserver]
 172.31.43.193 
+
 
 [myredhatservers]
 172.31.3.117

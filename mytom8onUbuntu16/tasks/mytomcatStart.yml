@@ -1,0 +1,6 @@
+---
+- name: my tocmat start 
+  systemd:
+    state: started
+    daemon_reload: yes
+    name: tomcat

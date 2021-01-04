@@ -6,3 +6,6 @@
 - include_tasks: myextract.yml
 - include_tasks: myPermissions.yml
 - include_tasks: mytomconfig.yml
+- include_tasks: mytomcatStart.yml
+- include_tasks: mytomcatManagement.yml
+- include_tasks: mytomcatrestart.yml 
