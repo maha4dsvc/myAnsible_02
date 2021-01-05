@@ -1,21 +1,48 @@
 ---
 - name: change group
-  command: sudo chgrp -R tomcat /opt/tomcat
-     
-- name:  chmod g+r
-  command: sudo chmod -R g+r /opt/tomcat/conf
-
-- name: chmod g+x
-  command: sudo chmod g+x /opt/tomcat/conf
+  file:
+    path: /opt/tomcat
+    state: directory
+    recurse: yes
+    group: tomcat
   
-- name: chown on webapps
-  command: sudo chown -R tomcat /opt/tomcat/webapps/
+- name:  change mode on config
+  file:
+   path: /opt/tomcat/conf
+   state: directory
+   recurse: yes
+   mode: g+r
 
-- name: chown on work
-  command: sudo chown -R tomcat /opt/tomcat/work/
+- name:  change mode on config
+  file:
+   path: /opt/tomcat/conf
+   state: directory
+   mode: g+x
 
-- name: chown on temp
-  command: sudo chown -R tomcat /opt/tomcat/temp/
+- name: change owner on webapps
+  file:
+    path: /opt/tomcat/webapps/
+    state: directory
+    recurse: yes
+    owner: tomcat
 
-- name: chown on logs
-  command: sudo chown -R tomcat /opt/tomcat/logs/
+- name: change owner work
+  file:
+    path: /opt/tomcat/work/
+    state: directory
+    recurse: yes
+    owner: tomcat
+- name: change owner temp
+  file:
+    path: /opt/tomcat/temp/
+    state: directory
+    recurse: yes
+    owner: tomcat
+
+- name: change owner logs
+  file:
+    path: /opt/tomcat/logs/
+    state: directory
+    recurse: yes
+    owner: tomcat
+
